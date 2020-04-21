@@ -8,5 +8,12 @@ use App\Contract\Permission\GroupContract;
 
 class Group extends Model implements GroupContract
 {
-    //
+    public function permissions(): BelongsToMany
+    {}
+    public static function findByName(string $name, $guardName): self
+    {}
+    public static function findById(int $id, $guardName): self
+    {}
+    public static function findOrCreate(string $name, $guardName): self
+    {}
 }

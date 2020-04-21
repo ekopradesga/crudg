@@ -38,7 +38,7 @@ class PermissionRegistrar
     {
         self::$cacheExpirationTime = config('permission.cache.expiration_time', 3600);
         self::$cacheKey = config('permission.cache.key', 'rgpab_cache');
-        self::$cacheModelKey = config('permission.cache.model_key', 'rgpab_mkey');
+        self::$cacheModelKey = config('permission.cache.model_key', 'name');
         $this->cache = $this->getCacheStoreFromConfig();
     }
 
